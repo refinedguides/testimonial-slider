@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap");
+
+:root {
+  --space-cadet: #1f2041;
+  --sunglow: #ffc857;
+  --dark-cyan: #119da4;
+  --paynes-gray: #19647e;
+  --light-color: #fff;
+  --muted-color: slategray;
+  --dot-color: #ccc;
+}
+
+* {
+  font-family: "Outfit", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  color: var(--space-cadet);
+  background: var(--dark-cyan);
+  background: linear-gradient(
+    135deg,
+    var(--sunglow),
+    var(--dark-cyan),
+    var(--paynes-gray)
+  );
+}
+
+h1 {
+  text-align: center;
+  color: var(--paynes-gray);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+.testimonial-slider {
+  max-width: 1200px;
+  width: 90%;
+  background-color: var(--light-color);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-list {
+  display: flex;
+  overflow: hidden;
+}
+
+.testimonial {
+  flex: 1 0 100%;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.testimonial .bi-quote {
+  font-size: 4rem;
+  color: var(--sunglow);
+  opacity: 0.75;
+}
+
+.testimonial blockquote {
+  font-size: 1.25rem;
+  margin-inline: 20px;
+}
+
+.user-info {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.user-info img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.user-details .name {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--dark-cyan);
+}
+
+.user-details .company {
+  color: var(--muted-color);
+}
+
+/* button navigation */
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  background-color: var(--light-color);
+  color: var(--paynes-gray);
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.testimonial-slider:hover .nav {
+  opacity: 1;
+}
+
+.nav:hover {
+  background-color: var(--dark-cyan);
+  color: var(--light-color);
+}
+
+.nav.prev {
+  left: 10px;
+}
+
+.nav.next {
+  right: 10px;
+}
+
+/* dot navigation */
+
+.dots-container {
+  text-align: center;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 5px;
+  margin-inline: 5px;
+  background-color: var(--dot-color);
+  transition: width 0.5s;
+}
+
+.dot.active {
+  width: 30px;
+  background-color: var(--paynes-gray);
+}
