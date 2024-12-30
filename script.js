@@ -1,8 +1,8 @@
 const slider = document.querySelector(".testimonial-slider");
-const testimonials = document.querySelectorAll(".testimonial");
-const nextBtn = document.querySelector(".next");
-const prevBtn = document.querySelector(".prev");
-const dotsContainer = document.querySelector(".dots-container");
+const testimonials = slider.querySelectorAll(".testimonial");
+const nextBtn = slider.querySelector(".next");
+const prevBtn = slider.querySelector(".prev");
+const dotsContainer = slider.querySelector(".dots-container");
 
 let currentIndex = 0;
 let touchStartX = 0;
@@ -95,8 +95,6 @@ function prevTestimonial() {
 
 //* initialize
 
-document.addEventListener("DOMContentLoaded", function () {
-  renderDotButtons();
-  startAutoSlide();
-  initApp();
-});
+renderDotButtons();
+startAutoSlide();
+initApp();

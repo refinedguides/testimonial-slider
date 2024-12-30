@@ -20,7 +20,7 @@
 body {
   display: grid;
   place-items: center;
-  height: 100vh;
+  min-height: 100dvh;
   color: var(--space-cadet);
   background: var(--dark-cyan);
   background: linear-gradient(
@@ -42,7 +42,7 @@ button {
 }
 
 .testimonial-slider {
-  max-width: 1200px;
+  max-width: 800px;
   width: 90%;
   background-color: var(--light-color);
   padding: 30px;
@@ -65,13 +65,13 @@ button {
 }
 
 .testimonial .bi-quote {
-  font-size: 4rem;
+  font-size: 2.5rem;
   color: var(--sunglow);
   opacity: 0.75;
 }
 
 .testimonial blockquote {
-  font-size: 1.25rem;
+  font-size: 1rem;
   margin-inline: 20px;
 }
 
@@ -118,11 +118,6 @@ button {
   background-color: var(--light-color);
   color: var(--paynes-gray);
   transition: 0.3s;
-  opacity: 0;
-}
-
-.testimonial-slider:hover .nav {
-  opacity: 1;
 }
 
 .nav:hover {
@@ -157,4 +152,22 @@ button {
 .dot.active {
   width: 30px;
   background-color: var(--paynes-gray);
+}
+
+@media (min-width: 768px) {
+  .testimonial .bi-quote {
+    font-size: 4rem;
+  }
+
+  .testimonial blockquote {
+    font-size: 1.25rem;
+  }
+
+  .nav {
+    opacity: 0;
+  }
+
+  .testimonial-slider:hover .nav {
+    opacity: 1;
+  }
 }
